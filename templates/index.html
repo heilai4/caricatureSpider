@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>搜索爬虫</title>
+</head>
+<body>
+  <h2>搜索内容</h2>
+  <form method="POST" action="/search">
+    <input type="text" name="query" placeholder="输入搜索关键词">
+    <button type="submit">搜索</button>
+  </form>
+  <div>
+    {% if result %}
+      <h3>爬虫结果：</h3>
+      <pre>{\{ result \}}</pre>
+    {% endif %}
+  </div>
+</body>
+</html>
